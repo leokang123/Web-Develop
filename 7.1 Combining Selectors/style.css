@@ -1,0 +1,26 @@
+/* Write your code here: */
+
+/* group apply two thing same style */
+h1, h2 { 
+    color:blueviolet
+}
+
+/* box class 의 1단계 자식 p에 대한 스타일지정이다  */
+.box > p {
+    color: firebrick;
+}
+
+/* class의 여러단계 자식에 대한 스타일지정이다 (클래스 하위 태그에 대한 스타일 지정)  */
+.box li {
+    color: blue;
+}
+
+/* 단 한개 요소에 대해 매우 구체적이게 스타일지정 할떄 chaining 방법을 쓴다 element->tag->id 중간 여백없이 쓰면 됌 */
+.box li.done {
+    color: seagreen;
+}
+
+ul p.done {
+    font-size: 0.5rem;
+}
+

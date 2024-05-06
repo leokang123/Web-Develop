@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox</title>
+  <style>
+    .flex-container {
+      display: flex;
+      background: grey;
+    }
+    .inline-flex {
+      display: inline-flex;
+      margin: 10px;
+      background-color: grey;
+    }
+
+    .card {
+      background: blue;
+      margin: 10px;
+      height: 100px;
+      flex: 1;
+    }
+
+    .card2 {
+      background: red;
+      margin: 10px;
+      flex: 1;
+    }
+
+    .first {
+      flex: 2;
+    }
+
+    .second {
+      flex: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS Flexbox</h1>
+  <div class="flex-container">
+    <div class="first card"></div>
+    <div class="second card"></div>
+    <div class="card"></div>
+    <div class="card"></div>
+  </div>
+  <div class="inline-flex">
+    <div class="first card2">abc</div>
+    <span class="second card2">hello</span>
+
+  </div>
+
+
+</body>
+
+</html>

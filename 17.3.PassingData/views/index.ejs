@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Letters</title>
+</head>
+
+<body>
+  <!-- Write your code here -->
+  <!-- locals를 써야 해당 변수가 없는 경우에 실행 가능함  -->
+  <% if (locals.numberOfLetter) { %>
+    <h1>There are <%= numberOfLetter %> in your name</h1>
+    <% } else { %>
+      <h1>Write Your Name Below</h1>
+      <% } %>
+  <form action="/submit" method="POST">
+    <input type="text" name="fName" placeholder="First name">
+    <input type="text" name="lName" placeholder="Last name">
+    <input type="submit" value="OK">
+  </form>
+</body>
+
+</html>

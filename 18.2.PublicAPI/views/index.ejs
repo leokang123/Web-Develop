@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lisper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <h1>What's your Pokemon?</h1>
+  <div class="card">
+    <% if(locals.image) { %>
+    <img src="<%= image %>" alt="pokeImage" class="card">
+    <% } %> 
+    <p>
+      NAME: <%= name %>
+    </p>
+  </div>
+  <p class="user">
+    TYPE: <%= type %>
+  </p>
+  <button id="pokemon" onclick="window.location.href='/random'">Choose Random Pokemon</button>
+
+</body>
+
+</html>

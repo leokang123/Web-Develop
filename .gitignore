@@ -2,6 +2,3 @@
 node_modules/
 **/node_modules/
 
-# Ignore all .json files
-*.json
-**/*.json

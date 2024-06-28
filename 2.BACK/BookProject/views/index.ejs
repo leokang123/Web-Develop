@@ -1,6 +1,14 @@
 <%- include('partials/header') %>
-<h1>Available Books</h1>
-<div class="row justify-content-center">
+<h1>Books I've Read</h1>
+<hr class="my-hr">
+<div class="row justify-content-center m-5">
+  <% if (empty) { %>
+    <div class="m-5">
+      <hr>
+      <h1>Empty Items</h1>
+      <hr class="mt-4">
+    </div>
+  <% } else { %>
   <% books.forEach((book) => { %>
     <div class="col-md-9 m-2">
       <div class="card p-5">
@@ -9,12 +17,15 @@
             <img src="https://covers.openlibrary.org/b/isbn/<%=book.book_id%>-L.jpg" class="img-fluid" alt="Book Image">
           </div>
           <div class="col">
-            <h5 class="card-title"><%=book.title%>></h5>
+            <small><%=book.date.toISOString().substring(0, 10)%></small>
+            <h5 class="card-title"><%=book.title%></h5>
             <div class="card-text">
               <p>Author: <%=book.author%></p>
               <p>Review: <%=book.review%></p>
+              <p>Rate: <%=book.rate%> / 5</p>
             </div class="row">
               <form class="edit" action="/edit" method="post">
+                <input type="hidden" name="book_id" value=<%=book.book_id%>>
                 <button class="edit btn btn-primary" name="type" value="edit" type="submit"> Edit </button>
                 <button class="edit btn btn-primary" name="type" value="delete"  type="submit"> Delete </button>
               </form>
@@ -23,5 +34,6 @@
         </div>
       </div>
   <%}) %>
+<%} %>
 </div>
 <%- include('partials/footer') %>

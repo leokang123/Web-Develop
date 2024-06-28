@@ -1,0 +1,43 @@
+digraph G {
+
+   subgraph cluster_0 {
+    style = tab;
+    color=blue;
+    label = "Service Package";
+        subgraph cluster_1 {
+            Product [shape=box style=filled color=cyan]
+            sku;
+            price;
+            title;
+            label = "Product.file";
+            color=lightgrey;
+        }
+      
+        subgraph cluster_2 {
+            Order [shape=box style=filled color=cyan]
+            orderId;
+            product;
+            label = "Order.file";
+            color=lightgrey;
+        }
+    }
+  
+    subgraph cluster_9 {
+        style = tab;
+        label = "System Package";
+        color=blue;
+    
+        subgraph cluster_10 {
+            String [shape=box style=filled color=cyan]
+            Int [shape=box style=filled color=cyan]
+            label = "Source.file";
+            color=lightgrey;
+      }
+    }
+    
+    sku -> String;
+    price -> Int;
+    title -> String;
+    orderId -> String;
+    product -> Product;
+}

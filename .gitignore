@@ -8,3 +8,6 @@ node_modules/
 .env.test.local
 .env.production.local
 .env.local
+
+# 해당폴더에 대한 메타데이터 
+.DS_Store
